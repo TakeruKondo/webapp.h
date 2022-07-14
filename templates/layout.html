@@ -1,0 +1,77 @@
+<!DOCTYPE html>
+<html lang="ja">
+    
+<head>
+    {% block head %}
+        <meta charset="UTF-8">
+        <meta http-equiv="X-UA-Compatible" content="IE=edge">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <title>ちっちヨーガ</title>
+        <!-- Add icon library -->
+        <link rel="stylesheet" href="{{ url_for('static', filename='style.css') }}" >
+        <script src="https://kit.fontawesome.com/dd029f6cae.js" crossorigin="anonymous"></script>
+        <link rel="shortcut icon" href="{{ url_for('static', filename= 'favicon.ico') }}">
+        
+        <!-- fonts -->
+        <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+        <link rel="preconnect" href="https://fonts.googleapis.com">
+        <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+        <link href="https://fonts.googleapis.com/css2?family=Titillium+Web:wght@200&family=Zen+Maru+Gothic:wght@400;700&display=swap" rel="stylesheet">
+        <link rel="preconnect" href="https://fonts.googleapis.com">
+        <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+        <link href="https://fonts.googleapis.com/css2?family=Titillium+Web:wght@200&family=Zen+Kaku+Gothic+New:wght@300;400;500;700;900&family=Zen+Maru+Gothic:wght@400;700&display=swap" rel="stylesheet">
+
+        <!-- loading -->
+        
+    {% endblock %}
+</head>
+    
+
+    <body> 
+        
+
+        <!-- Loading Animation -->
+        <!-- {% block loader %}
+
+        {% endblock %} -->
+        
+        <header>
+            {% block header %}
+
+            {% endblock %}
+        </header> 
+
+
+            {% block content %}
+
+            {% endblock %}
+    
+        
+        <!-- footer -->
+        
+        
+        <footer>
+            {% block footer %}
+            <div class="fotbar">
+                <div class="right">
+                    <div class="cpr">© 2022 ちっちヨーガ</div>
+                </div>
+                
+
+                <ul class="social-list">
+                    <li ><a href="https://instagram.com/chicchi_yoga" class="fab fa-instagram" style="font-size:24px"></a></li>
+                    <li ><a href="social-list__link"class="fa fa-facebook-square" style="font-size:24px"></a></li>
+                    <li ><a href="https://line.me/R/ti/p/@486czwse"class="fa-brands fa-line" style="font-size:24px"></a></li>
+                    <li ><a href="social-list__link"class="fab fa-youtube" style="font-size:24px"></a></li> 
+                </ul>
+
+            </div>
+            {% endblock %}
+        </footer>
+          <!--   トップに戻るボタン -->
+        <!-- ページトップへ戻るボタン -->
+        
+        <script src="static/main.js"></script>
+    </body> 
+</html>
+

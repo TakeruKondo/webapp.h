@@ -1,0 +1,125 @@
+{% extends "layout.html" %}
+
+
+    <body>
+        <header>
+            {% block header %}
+            <div class="logo" id="home">
+                <a href="./index.html"><img src="./static/assets/niji-logo.png" alt=""></a>
+            </div>
+            <div class="nav-toggle" aria-label="toggle navigation">
+                <span class="hamburger"></span>
+            </div>
+            <nav class="nav">
+                <ul class="nav__list">
+                    <li class="nav__item"><a href="./index.html#about" class="nav__link">わたしたちのこと</a></li>
+                    <li class="nav__item"><a href="./index.html#blog" class="nav__link">おしらせBlog</a></li>
+                    <li class="nav__item"><a href="./contact.html#contactus" class="nav__link">お問合せ</a></li>
+                    <li class="nav__item"><a href="./booking.html" class="nav__link">あそびの予約</a></li>
+                    <li class="nav__item"><a href="./login.html" class="nav__link">ログイン</a></li>
+        
+                </ul>
+            </nav>
+            {% endblock %}
+        </header> 
+
+
+        {% block content %}
+
+        <div class="content-section">
+            <form action="{{ url_for('contactme.contact') }}" method="POST" onsubmit="" >
+                {{ form.hidden_tag() }}
+                <div class="title-login"><h1> お問合せ</h1></div>
+                <div class="reset-description">ご質問・キッズヨーガ導入のご相談などは下記フォームよりお送りください。ちっちヨーガ担当者によりご連絡させて頂きます。</div>
+                
+                <div class="form-group">
+                    {{ form.name.label(class="form-control-label") }}
+                    {% if form.name.errors %}
+                        {{ form.name(class="form-control form-control-lg is-invalid")}}
+                        <div class="invalid-feedback">
+                            {% for error in form.name.errors %}
+                                <span>{{ error }}</span>
+                            {% endfor %}
+                        </div>
+                    {% else %}
+                        {{ form.name(class="form-control form-control-lg") }}
+                    {% endif %}
+                </div>
+
+                <div class="form-group">
+                    {{ form.email.label(class="form-control-label") }}
+                    {% if form.email.errors %}
+                        {{ form.email(class="form-control form-control-lg is-invalid")}}
+                        <div class="invalid-feedback">
+                            {% for error in form.email.errors %}
+                                <span>{{ error }}</span>
+                            {% endfor %}
+                        </div>
+                    {% else %}
+                        {{ form.email(class="form-control form-control-lg") }}
+                    {% endif %}
+                </div>
+
+                <div class="form-group">
+                    {{ form.subject.label(class="form-control-label") }}
+                    {% if form.subject.errors %}
+                        {{ form.subject(class="form-control form-control-lg is-invalid")}}
+                        <div class="invalid-feedback">
+                            {% for error in form.subject.errors %}
+                                <span>{{ error }}</span>
+                            {% endfor %}
+                        </div>
+                    {% else %}
+                        {{ form.subject(class="form-control form-control-lg") }}
+                    {% endif %}
+                </div>
+
+                <div class="form-group">
+                    {{ form.message.label(class="form-control-label") }}
+                    {% if form.message.errors %}
+                        {{ form.message(class="form-control form-control-lg is-invalid")}}
+                        <div class="invalid-feedback">
+                            {% for error in form.message.errors %}
+                                <span>{{ error }}</span>
+                            {% endfor %}
+                        </div>
+                    {% else %}
+                        {{ form.message(class="form-control form-control-lg") }}
+                    {% endif %}
+                </div>
+
+                <div class="form-group">
+                    {{ form.submit(class="btn btn-outline-info") }}
+                </div>
+                
+        
+            
+            </form>
+        </div>
+        
+        <hr>
+
+        {% endblock %}
+        <!-- footer -->
+        <footer>
+            <div class="fotbar">
+                <div class="right">
+                    <div class="cpr">© 2022 ちっちヨーガ</div>
+                </div>
+                
+
+                <ul class="social-list">
+                    <li ><a href="social-list__link" class="fab fa-instagram" style="font-size:24px"></a></li>
+                    <li ><a href="social-list__link"class="fa fa-facebook-square" style="font-size:24px"></a></li>
+                    <li ><a href="social-list__link"class="fa-brands fa-line" style="font-size:24px"></a></li>
+                    <li ><a href="social-list__link"class="fab fa-youtube" style="font-size:24px"></a></li>
+                </ul>
+
+            </div>
+           
+        </footer>
+
+        <script src="./static/main.js"></script>
+    </body>
+</html>
+

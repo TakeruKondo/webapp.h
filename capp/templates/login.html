@@ -1,0 +1,93 @@
+{% extends "layout.html" %}
+
+
+<body>
+    <header>
+        {% block header %}
+        <div class="logo" id="home">
+            <a href="./index.html"><img src="./static/assets/niji-logo.png" alt=""></a>
+        </div>
+        <div class="nav-toggle" aria-label="toggle navigation">
+            <span class="hamburger"></span>
+        </div>
+        <nav class="nav">
+            <ul class="nav__list">
+                <li class="nav__item"><a href="./index.html#about" class="nav__link">わたしたちのこと</a></li>
+                <li class="nav__item"><a href="./index.html#blog" class="nav__link">おしらせBlog</a></li>
+                <li class="nav__item"><a href="./contact.html#contactus" class="nav__link">お問合せ</a></li>
+                <li class="nav__item"><a href="./booking.html" class="nav__link">あそびの予約</a></li>
+                <li class="nav__item"><a href="./login.html" class="nav__link">ログイン</a></li>    
+                
+            </ul>
+        </nav>
+        {% endblock %}
+    </header> 
+
+    {% block content %}
+    <div class="content-section">
+        <form id = "myForm" method="POST" action="">
+            {{ form.hidden_tag() }}
+            <div class="title-login"><h1>ログイン</h1></div>
+                <div class="form-group">
+                    {{ form.email.label(class="form-control-label") }}
+                    {% if form.email.errors %}
+                        {{ form.email(class="form-control form-control-lg is-invalid")}}
+                        <div class="invalid-feedback">
+                            {% for error in form.email.errors %}
+                                <span>{{ error }}</span>
+                            {% endfor %}
+                        </div>
+                    {% else %}
+                        {{ form.email(class="form-control form-control-lg") }}
+                    {% endif %}
+                </div>
+                <div class="form-group">
+                    {{ form.password.label(class="form-control-label") }}
+                    {% if form.password.errors %}
+                        {{ form.password(class="form-control form-control-lg is-invalid") }}
+                        <div class="invalid-feedback">
+                            {% for error in form.password.errors %}
+                                <span>{{ error }}</span>
+                            {% endfor %}
+                        </div>
+                    {% else %}
+                        {{ form.password(class="form-control form-control-lg") }}
+                    {% endif %}
+                </div>
+                <div class="form-check">
+                    {{ form.remember(class="form-check-input") }}
+                    {{ form.remember.label(class="form-check-label") }}
+                </div>
+            <div class="form-group">
+                {{ form.submit(class="btn btn-outline-info") }}
+                <small class="text-muted ml-2">
+                    <a href="{{ url_for('loginme.reset_request') }}">パスワードを忘れた場合</a>
+                </small>
+            </div>
+            <div class="border-top pt-3">
+                <small class="text-muted">
+                    <a class="ml-2" href="{{ url_for('loginme.register') }}">新規アカウント作成</a>
+                </small>
+            </div>  
+        </form>
+    </div>
+   
+
+    <div class="policy">
+        <small class="text-muted">
+            <a class="ml-2" href="./policy.html">ちっちヨーガ - プライバシーポリシー・規約規約</a>
+        </small>
+    </div>
+
+
+    {% endblock %}
+   
+    <hr>
+    <!-- footer -->
+    {% block footer %} {% endblock %}
+
+
+    <script src="./static/main.js"></script>
+</body>
+</html>
+

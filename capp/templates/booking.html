@@ -1,0 +1,187 @@
+{% extends "layout.html" %}
+
+
+    <body>
+        <header>
+            {% block header %}
+            <div class="logo" id="home">
+                <a href="./index.html"><img src="./static/assets/niji-logo.png" alt=""></a>
+            </div>
+            <div class="nav-toggle" aria-label="toggle navigation">
+                <span class="hamburger"></span>
+            </div>
+            <nav class="nav">
+                <ul class="nav__list">
+                    <li class="nav__item"><a href="./index.html#about" class="nav__link">わたしたちのこと</a></li>
+                    <li class="nav__item"><a href="./index.html#blog" class="nav__link">おしらせBlog</a></li>
+                    <li class="nav__item"><a href="./contact.html" class="nav__link">お問合せ</a></li>
+                    <li class="nav__item"><a href="./booking.html" class="nav__link">あそびの予約</a></li>
+                    <li class="nav__item"><a href="./login.html" class="nav__link">ログイン</a></li>
+                </ul>
+            </nav>
+            {% endblock %}
+        </header> 
+        
+        {% block content %}
+    <!-- ******* main ************** -->
+        <section class="main">
+            <div class="global-content">
+                <div class="global-container">
+                    <div class="global-word">
+                        <h1>あそびの予約</h1>
+                    </div>
+                </div>
+                
+                <div class="card-grid">
+                    <div class="pricing-card">
+                        <section class="pricing-card-inner">
+                            <div class="card-header">
+                                <div class="header-main">
+                                    <h4>よなよなヨーガ</h4>
+                                </div>
+                                <div class="header-second">
+                                    <p>週の真ん中、水曜日に”リセット”をしてみよう</p>
+                                </div>
+                            </div>
+                            <div class="card-body">
+
+                                <div class="card-price">
+                                    <div class="card-price-wrap">
+                                        <div class="price-number"><h1>1,000円</h1></div>
+                                        <div class="price-term">
+                                            /月
+                                        </div>
+                                        <div class="card-price-info">こども、親子向け</div>
+                                    </div>
+                                    
+                                </div>
+                                
+                                <div class="card-btn">
+                                    <a href="#">始める</a>
+                                </div>
+
+                                <div class="card-features">
+                                    <ul class=" what-you-get">
+                                        <li>毎週水曜日</li>
+                                        <li>途中参加OK！</li>
+                                        <li>最後の10分よなよな絵本だけ参加するのもOK！</li>
+                                        <li>子育てについての悩みも是非皆さんでお話ししましょう！</li>
+                                    </ul>
+                                </div>
+                            </div>
+                        </section>
+                    </div>
+                   
+                    <div class="pricing-card2">
+                        <section class="pricing-card-inner">
+                            <div class="card-header">
+                                <div class="header-main">
+                                    <h4>親子ヨーガイベント</h4>
+                                </div>
+                                <div class="header-second">
+                                    <p>いきる力を育む習い事</p>
+                                </div>
+                            </div>
+                            <div class="card-body">
+
+                                <div class="card-price">
+                                    <div class="card-price-wrap">
+                                        <div class="price-number"><h1>5,000円</h1></div>
+                                        <div class="price-term">
+                                            /月
+                                        </div>
+                                        <div class="card-price-info">こども、親子向け</div>
+                                    </div>
+                                    
+                                </div>
+                                
+                                <div class="card-btn">
+                                    <a href="#">始める</a>
+                                </div>
+
+                                <div class="card-features">
+                                    <ul class=" what-you-get">
+                                        <li>月１開催</li>
+                                        <li>イベント内容については後ほど公開</li>
+                                        <li>親子クッキング・知育遊びなどなど</li>
+                                    </ul>
+                                </div>
+                            </div>
+                        </section>
+                    </div>
+                
+                    <div class="pricing-card3">
+                        <section class="pricing-card-inner">
+                            <div class="card-header">
+                                <div class="header-main">
+                                    <h4>おとなヨガ</h4>
+                                </div>
+                                <div class="header-second">
+                                    <p>体のリセットヨガ</p>
+                                </div>
+                            </div>
+                            <div class="card-body">
+
+                                <div class="card-price">
+                                    <div class="card-price-wrap">
+                                        <div class="price-number"><h1>3,000</h1></div>
+                                        <div class="price-term">
+                                            /月
+                                        </div>
+                                        <div class="card-price-info">大人向け</div>
+                                    </div>
+                                </div>
+                                
+                                <div class="card-btn">
+                                    <a href="#">始める</a>
+                                </div>
+
+                                <div class="card-features">
+                                    <ul class=" what-you-get">
+                                        <li>月１開催</li>
+                                        <li>イベント内容については後ほど公開</li>
+                                        <li>さまざまなアクティビティ</li>
+                                    </ul>
+                                </div>
+                            </div>
+                        </section>
+                    </div>
+
+
+                </div>
+                
+                <div class="forum">
+                    <div class="qrs">
+                        <div class="global-qr"><h1>よくあるご質問</h1></div>
+                        <hr>
+                    </div>
+                </div>
+            </div>            
+        </section>
+
+        
+        
+        
+        <hr>
+        {% endblock %}
+        <footer>
+            <div class="fotbar">
+                <div class="right">
+                    <div class="cpr">© 2022 ちっちヨーガ</div>
+                </div>
+                
+
+                <ul class="social-list">
+                    <li ><a href="social-list__link" class="fab fa-instagram" style="font-size:24px"></a></li>
+                    <li ><a href="social-list__link"class="fa fa-facebook-square" style="font-size:24px"></a></li>
+                    <li ><a href="social-list__link"class="fa-brands fa-line" style="font-size:24px"></a></li>
+                    <li ><a href="social-list__link"class="fab fa-youtube" style="font-size:24px"></a></li>
+                </ul>
+
+            </div>
+           
+        </footer>
+
+        <script src="./static/main.js"></script>
+    </body>
+</html>

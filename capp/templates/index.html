@@ -1,0 +1,119 @@
+{% extends "layout.html" %}
+
+
+
+    <body>
+        <!-- {% block loader %}
+        <div id="js-loader" class="container">
+            <div class="loader">
+                <img src="./static/assets/loadinganime.gif" alt="">
+            </div> 
+            <div class="loading-title"><h1>ちっちヨーガ</h1></div>  
+        </div>
+        {% endblock %} -->
+
+
+
+        {% block header %}
+        <div class="logo" id="home">
+            <a href="./index.html"><img src="./static/assets/niji-logo.png" alt=""></a>
+        </div>
+        <div class="nav-toggle" aria-label="toggle navigation">
+            <span class="hamburger"></span>
+        </div>
+        <nav class="nav">
+            <ul class="nav__list">
+                <li class="nav__item"><a href="#about" class="nav__link">わたしたちのこと</a></li>
+                <li class="nav__item"><a href="#blog" class="nav__link">おしらせBlog</a></li>
+                <li class="nav__item"><a href="./contact.html" class="nav__link">お問合せ</a></li>
+                <li class="nav__item"><a href="./booking.html" class="nav__link">あそびの予約</a></li>
+                <li class="nav__item"><a href="./login.html" class="nav__link">ログイン</a></li>    
+            </ul>
+        </nav>
+        {% endblock %}
+        
+       
+        {% block content %}
+        <!-- introduction -->
+        <section class="intro" id="home">
+             <img src="./static/assets/kodomo.gif" alt="a main gif" class="intro__img">
+            <h1 class="section__title section__title--intro">
+                あそぶこと<br>まなぶこと<br>いきること
+            </h1> 
+           
+        </section>
+        
+        
+        
+        
+        <!-- aboutus -->
+        <section class="aboutus" id="about">
+            <div class="right">
+                <h2 class="subsection__title section__title--about">ちっちヨーガ</h2>
+                <img src="./static/assets/about.jpeg" alt="about-img">
+            </div>
+            <div class="left">
+                <h3 class="submain">わたしたちのこと</h3>
+                <div class="statement">
+                    <p>子ども言葉で立つことを「たっち」といいます。</p>
+                    ヨーガを通して地に立つ＝自立して歩んでいけるようにという想いを込めて名づけました。</p>
+                    
+                    <p>何より未来を生きる子どもたちを取り巻く大人が子どもたちの“個育て“を悩みながらも大いに楽しんでほしい！！</p>
+                    
+                    <p>何か特別なことをする必要はありません。<br>
+                    今ここにある小さな幸せに気づいていくこと。</p>
+                    
+                    <p>“健康な心と身体“<br>
+                    それを作る“食“<br>
+                    それを作る“自然“<br>
+                    そして大きなHOMEである“地球“</p>
+                    
+                    <p>そのように考えると<br>
+                    小さな幸せで心が満たされ<br>
+                    大きな悩みが小さく感じませんか？</p>
+                    
+                    <p><h3>さあ！みんなで遊ぶように生きてみよう！</h3></p>
+                </div>
+            </div> 
+        </section>
+        <hr class="below-aboutus">
+        <!-- insta-feed -->
+        <section class="Blog" id="blog">
+            <div class="tagembed-container" style=" width:100%;height:100%;overflow: auto;"><div class="tagembed-socialwall" data-wall-id="47514" view-url="https://widget.tagembed.com/47514?view">  </div> <script src="//widget.tagembed.com/embed.min.js" type="text/javascript"></script></div>
+        </section>
+        <hr>
+        <!-- book -->
+        <section class="letsplay" id="book">
+            <div class="left">
+                <h1 class="letsplay__play">あ・そ・ぼ・う</h1>
+                <p> 
+                    キッズヨーガを通してこどもたちの成長を応援したい !<br>ご興味がある方は
+                    こちらからお問合せください。<br>
+                </p>
+
+                <div class="resbotton">
+                    <a href ="./booking.html" class="btn btn-border">
+                        <span>予約する</span>
+                    </a>
+                    <p><a href=".contact.html" class="btn-light2" id="contactus">お問合せ</a></p>
+                </div>
+            </div>
+
+            <div class="right">
+                    <img src="./static/assets/DSC_0787.JPG" alt="" width="300px" height="auto" >
+            </div>
+        </section>
+        <hr class="reseervation">
+
+        {% endblock %}
+        
+        <!-- footer -->
+        {% block footer %}
+        {{ super() }}
+        {% endblock %}
+    
+        <script src="static/main.js"></script>
+        
+    </body>
+</html>
+
